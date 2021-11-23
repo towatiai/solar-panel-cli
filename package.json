@@ -1,0 +1,13 @@
+{
+  "name": "deno-cli",
+  "version": "1.0.0",
+  "description": "CLI implementation for course CS-E5220: Assignment 3",
+  "main": "main.js",
+  "author": "Toni Tiainen",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "chalk-pipe": "^5.1.1",
+    "inquirer": "^8.2.0"
+  }
+}
