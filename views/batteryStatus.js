@@ -18,9 +18,9 @@ const batteries = [...range(1, 4)].map(i => ({
 module.exports.run = () => {
 
     console.log("The building has four PowerWall batteries with capacity of 13.5 kWh each.\n");
-    console.log("Name\t\tCharge\t\tStatus")
+    console.log("Name\t\tCharge\t\t\tStatus")
     batteries.forEach(b => {
-        console.log(`${b.name}\t${b.charge} | ${colorForPercentageDecr((b.charge/13.5*100).toFixed(1))}\t${b.charging?chalk.green("Charging"):chalk.red("Depleting")}`)
+        console.log(`${b.name}\t${b.charge} kWh | ${colorForPercentageDecr((b.charge/13.5*100).toFixed(1))}\t${b.charging?chalk.green("Charging"):chalk.red("Depleting")}`)
     });
     console.log("")
 }

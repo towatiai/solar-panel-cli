@@ -28,7 +28,7 @@ module.exports.actions = {
             validate(value) {
                 value = parseFloat(value);
                 const valid = !isNaN(value) && value > 0 && value < 20;
-                return valid || 'Please enter a positive number, lower than 20.';
+                return valid || 'Quota must be positive number, but less than 20 kWh.';
             }
         }, {
             type: 'confirm',
@@ -43,6 +43,8 @@ module.exports.actions = {
         }],
         run() {
             console.log(chalk.blue("Apartment 5: Quota\n"))
+            console.log("Current quota: 9 kWh/day");
+            console.log(`Average usage: ${chalk.red("108%")}\n`)
             console.log("Changing apartment's solar power quota will affect the apartment's compensation costs. Changes will come into effect for the following day.\n");
         },
         after(value) {
